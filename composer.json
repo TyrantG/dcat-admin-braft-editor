@@ -1,0 +1,32 @@
+{
+    "name": "tyrantg/dcat-admin-braft-editor",
+    "alias": "Braft Editor编辑器",
+    "description": "Dcat Admin扩展 - Braft Editor编辑器",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/tyrantg/dcat-admin-braft-editor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TyrantGenesis",
+            "email": "genesis489449701@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TyrantG\\BraftEditor\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "TyrantG\\BraftEditor\\DcatAdminBraftEditorServiceProvider",
+        "laravel": {
+            "providers": [
+                "TyrantG\\BraftEditor\\DcatAdminBraftEditorServiceProvider"
+            ]
+        }
+    }
+}
