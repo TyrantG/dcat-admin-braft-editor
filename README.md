@@ -12,6 +12,6 @@ composer require tyrantg/dcat-admin-braft-editor
 
 ## TODO
 
-- [ ] 图片 / 视频上传
+- [x] 图片 / 视频上传
 - [ ] 自定义样式
 - [ ] 自定义编辑器插件

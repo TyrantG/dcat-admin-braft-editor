@@ -6,7 +6,7 @@
 
         @include('admin::form.error')
 
-        <braft-editor name="{{$name}}" value="{!! $value !!}"></braft-editor>
+        <braft-editor name="{{$name}}" value="{{$value}}"></braft-editor>
 
         <input type="hidden" class="braft" name="{{$name}}" value="{{ old($column, $value) }}" />
 
