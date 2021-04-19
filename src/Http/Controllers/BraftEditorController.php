@@ -4,12 +4,15 @@ namespace TyrantG\BraftEditor\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use TyrantG\BraftEditor\DcatAdminBraftEditorServiceProvider;
 
 class BraftEditorController extends Controller
 {
     public function upload(Request $request)
     {
-        $file = $request->file('file')->store('public/braft-files');
+        $upload_path = DcatAdminBraftEditorServiceProvider::setting('upload_path') ?: 'public/braft-files';
+
+        $file = $request->file('file')->store($upload_path);
 
         $url = '/storage/'.str_replace('public/', '', $file);
 
