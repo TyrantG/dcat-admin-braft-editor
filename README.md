@@ -11,8 +11,8 @@ composer require tyrantg/dcat-admin-braft-editor
 ```
 
 ## 截图预览
-![1.png](./resources/screenshots/1.png)
-![2.png](./resources/screenshots/2.png)
+![1.png](https://raw.githubusercontent.com/TyrantG/dcat-admin-braft-editor/master/resources/screenshots/1.png)
+![2.png](https://raw.githubusercontent.com/TyrantG/dcat-admin-braft-editor/master/resources/screenshots/2.png)
 
 ## TODO
 
