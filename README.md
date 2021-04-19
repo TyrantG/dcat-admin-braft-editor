@@ -10,6 +10,10 @@
 composer require tyrantg/dcat-admin-braft-editor
 ```
 
+## 截图预览
+![1.png](./resources/screenshots/1.png)
+![2.png](./resources/screenshots/2.png)
+
 ## TODO
 
 - [x] 图片 / 视频上传
