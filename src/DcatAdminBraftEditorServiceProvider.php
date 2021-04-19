@@ -5,8 +5,6 @@ namespace TyrantG\BraftEditor;
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Admin;
 use Dcat\Admin\Form;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
 
 class DcatAdminBraftEditorServiceProvider extends ServiceProvider
 {
