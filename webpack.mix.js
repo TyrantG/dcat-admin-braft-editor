@@ -1,17 +1,11 @@
 const mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+const js_path = process.env.NODE_ENV === 'development' ? 'js/braft-editor.min.js' : 'resources/assets/js/braft-editor.min.js'
+const public_path = process.env.NODE_ENV === 'development' ? '../../../public/vendor/dcat-admin-extensions/tyrantg/dcat-admin-braft-editor' : 'resources/assets'
 
-mix.js('resources/js/app.js', 'resources/assets/js/braft-editor.min.js')
-    // .sass('resources/sass/app.scss', 'public/css')
+mix.js('resources/js/app.js', js_path)
     .vue()
+    .setPublicPath(public_path)
+    .setResourceRoot('/vendor/dcat-admin-extensions/tyrantg/dcat-admin-braft-editor')
+    .version()
     .sourceMaps()

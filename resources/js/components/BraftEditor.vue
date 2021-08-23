@@ -6,6 +6,7 @@
 import BraftEditor from '../react/BraftEditor'
 
 export default {
+    name: 'BraftEditor',
     props: {
         name: {
             type: String,

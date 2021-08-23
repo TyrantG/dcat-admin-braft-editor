@@ -3,6 +3,22 @@ import React from 'react'
 import BraftEditor from 'braft-editor'
 // 引入编辑器样式
 import 'braft-editor/dist/index.css'
+import 'braft-extensions/dist/table.css'
+
+import Table from 'braft-extensions/dist/table'
+
+
+const tableOptions = {
+    defaultColumns: 3, // 默认列数
+    defaultRows: 3, // 默认行数
+    withDropdown: true, // 插入表格前是否弹出下拉菜单
+    columnResizable: false, // 是否允许拖动调整列宽，默认false
+    exportAttrString: '', // 指定输出HTML时附加到table标签上的属性字符串
+    // includeEditors: [], // 指定该模块对哪些BraftEditor生效，不传此属性则对所有BraftEditor有效
+    // excludeEditors: []  // 指定该模块对哪些BraftEditor无效
+}
+
+BraftEditor.use(Table(tableOptions))
 
 export default class Editor extends React.Component {
 
@@ -103,6 +119,16 @@ export default class Editor extends React.Component {
                 <BraftEditor
                     value={editorState}
                     onChange={handleChange}
+                    controls={[
+                        'undo', 'redo', 'separator',
+                        'font-size', 'line-height', 'letter-spacing', 'separator',
+                        'text-color', 'bold', 'italic', 'underline', 'strike-through', 'separator',
+                        'superscript', 'subscript', 'remove-styles', 'emoji',  'separator', 'text-indent', 'text-align', 'separator',
+                        'headings', 'list-ul', 'list-ol', 'blockquote', 'code', 'separator',
+                        'link', 'separator', 'hr', 'separator',
+                        'media', 'separator',
+                        'table', 'clear', 'separator',
+                    ]}
                     media={{
                         uploadFn: this.handleUpload,
                         validateFn: this.mediaValidate,

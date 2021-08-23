@@ -26,5 +26,8 @@
     "vue-template-compiler": "^2.6.10",
     "vuera": "^0.2.7",
     "webpack": "^5.23.0"
+  },
+  "dependencies": {
+    "braft-extensions": "^0.1.1"
   }
 }
